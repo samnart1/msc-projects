@@ -3,9 +3,10 @@ package com.samnart.ecommerce.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.samnart.ecommerce.model.User;
+import com.samnart.ecommerce.model.Category;
+
 
 @Repository
-public interface UserRepo extends JpaRepository<User, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
     
 }

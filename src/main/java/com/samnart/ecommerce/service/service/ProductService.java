@@ -4,19 +4,22 @@ import java.io.IOException;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.samnart.ecommerce.model.Product;
+import com.samnart.ecommerce.payload.ProductDTO;
+import com.samnart.ecommerce.payload.ProductResponse;
 
 public interface ProductService {
     
-    Product addProduct(Long categoryId, Product product);
+    ProductDTO addProduct(Long categoryId, ProductDTO productDTO);
 
-    Product getAllProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
+    ProductResponse getAllProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
 
-    Product searchProductByKeyword(String keyword, Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
+    ProductResponse searchProductByKeyword(String keyword, Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
 
-    Product updateProduct(Product product, Long productId);
+    ProductResponse searchByCategory(Long categoryId, Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
 
-    Product deleteProduct(Long productId);
+    ProductDTO updateProduct(ProductDTO productDTO, Long productId);
 
-    Product updateProductImage(Long productId, MultipartFile image) throws IOException;
+    ProductDTO deleteProduct(Long productId);
+
+    ProductDTO updateProductImage(Long productId, MultipartFile image) throws IOException;
 }

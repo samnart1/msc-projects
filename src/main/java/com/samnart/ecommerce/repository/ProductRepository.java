@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.samnart.ecommerce.model.Product;
 
 @Repository
-public interface ProductRepo extends JpaRepository<Product, Long
+public interface ProductRepository extends JpaRepository<Product, Long
 > {
     
 }
