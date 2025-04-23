@@ -1,6 +1,6 @@
 # ☁️ Cloud Computing Project – E-Commerce Platform
 
-This repository contains a full-stack cloud-based e-commerce platform built with **Spring Boot** (Java) for the backend and **React** (TypeScript) for the frontend. The goal of this project is to demonstrate scalable cloud-based application development as part of my Cloud Computing coursework/internship/research (adjust accordingly).
+This repository contains a full-stack cloud-based e-commerce platform built with **Spring Boot** (Java) for the backend and **React** (TypeScript) for the frontend. The goal of this project is to demonstrate scalable cloud-based application development as part of our Cloud Computing coursework project.
 
 ---
 
@@ -12,21 +12,21 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 ## 🚀 Technologies Used
 
 ### ☕ Backend (Spring Boot)
-- Java 17
+- Java 21
 - Spring Boot 3+
 - Spring Data JPA
 - Spring Security
-- MySQL / PostgreSQL
+- PostgreSQL
 - Docker (optional for containerization)
 - RESTful APIs
-- Cloud deployment ready (e.g., AWS, Azure, or GCP)
+- Cloud deployment ready (AWS EC2)
 
 ### ⚛️ Frontend (React)
 - React 18 (TypeScript)
 - Redux Toolkit
 - Axios
 - React Router
-- Tailwind CSS / Material UI
+- Tailwind CSS && Material UI
 - Vite (optional for faster dev)
 
 ---
@@ -37,7 +37,6 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 - User authentication and authorization (JWT)
 - Product catalog (CRUD)
 - Order processing and checkout flow
-- Payment integration (mocked or real)
 - Admin panel endpoints for managing products and orders
 
 ### Frontend
@@ -46,7 +45,8 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 - Add to cart and checkout
 - User registration/login
 - Dashboard for user orders
-- Admin view (if implemented)
+- Admin view
+- Payment integration (Using stripe) integrated with the Backend
 
 ---
 
@@ -54,11 +54,11 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 
 ### Backend
 - Dockerized Spring Boot App
-- Deployed on: `EC2 / App Engine / Azure App Services` (choose your platform)
-- Exposed via NGINX or Spring's default server
+- Deployed on: `EC2 AWS`
+- Exposed via Spring's default server
 
 ### Frontend
-- Deployed on: `Vercel / Netlify / S3 + CloudFront` (choose your platform)
+- Deployed on: `S3 + CloudFront`
 - Connected to backend using environment variables
 
 ---
@@ -66,10 +66,10 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Java 17+
-- Node.js 18+
-- Maven or Gradle
-- MySQL/PostgreSQL
+- Java 21+
+- Bun.js or Node.js 18+
+- Maven
+- PostgreSQL
 - Docker (optional)
 
 ### Setup Instructions
@@ -78,6 +78,13 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 ```bash
 cd backend
 # Configure application.yml or application.properties
+./mvnw clean install
 ./mvnw spring-boot:run
 ```
+
+#### Frontend
+```bash
+cd frontend
+bun install
+bun dev
 
