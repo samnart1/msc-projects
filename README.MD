@@ -76,7 +76,7 @@ This repository contains a full-stack cloud-based e-commerce platform built with
 
 #### Backend
 ```bash
-cd backend
+cd ecommerce-api
 # Configure application.yml or application.properties
 ./mvnw clean install
 ./mvnw spring-boot:run
@@ -84,7 +84,7 @@ cd backend
 
 #### Frontend
 ```bash
-cd frontend
+cd ecommerce-webapp
 bun install
 bun dev
 
