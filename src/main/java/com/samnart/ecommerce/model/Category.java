@@ -24,9 +24,10 @@ public class Category {
     private Long categoryId;
 
     @NotBlank
-    @Size(min = 2, message = "Category name must be at least 2 characters")
+    @Size(min = 3, message = "Category name must be at least 3 characters!")
     private String categoryName;
-
+    
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
 }
+
